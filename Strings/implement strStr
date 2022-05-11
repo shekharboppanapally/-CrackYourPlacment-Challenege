@@ -1,0 +1,20 @@
+Given two strings needle and haystack, return the index of the first occurrence of needle in haystack, or -1 if needle is not part of haystack.
+
+Input: haystack = "hello", needle = "ll"
+Output: 2
+
+#Code 
+
+def implementstrStr(haystack,needle):
+    if needle not in haystack:
+        return -1 
+    elif needle=='':
+        return 0 
+    else:
+        return haystack.index(needle)
+
+haystack = "hello"
+needle = "ll"
+print(implementstrStr(haystack,needle))
+
+output=2 

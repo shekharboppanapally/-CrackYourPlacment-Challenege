@@ -1,0 +1,19 @@
+#Code 
+
+def duplicates(string):
+    res={}
+    ans=list(string.strip())
+    for x in ans:
+        if x in res:
+            res[x]+=1 
+        else:
+            res[x]=1 
+    s=''
+    for y in res:
+        if res[y]>1:
+            s+=y   
+    return s
+string="test string"
+print(duplicates(string))
+
+output='ts'

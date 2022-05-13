@@ -1,0 +1,27 @@
+Given an integer columnNumber, return its corresponding column title as it appears in an Excel sheet.
+A -> 1
+B -> 2
+C -> 3
+...
+Z -> 26
+AA -> 27
+AB -> 28 
+...
+
+Input: columnNumber = 28
+Output: "AB"
+
+#Code 
+
+def solve(columnNumber):
+    res='ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+    ans=''
+    while columnNumber>0:
+        columnNumber,idx=divmod(columnNumber-1,26)
+        ans=res[idx]+ans 
+    return ans
+
+columnNumber=701
+print(solve(columnNumber))
+
+output=ZY

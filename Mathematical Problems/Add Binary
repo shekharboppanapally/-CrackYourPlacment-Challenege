@@ -1,0 +1,21 @@
+Given two binary strings a and b, return their sum as a binary string.
+
+
+Input: a = "11", b = "1"
+Output: "100"
+
+#Code 
+
+def addBinary(a,b):
+    a=int(a,2)
+    b=int(b,2)
+    ans=a+b 
+    ans=bin(ans)
+    ans=ans[2:]
+    return ans
+
+a="11"
+b ="1"
+print(addBinary(a,b))
+
+output=100

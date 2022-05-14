@@ -1,0 +1,23 @@
+Given an unsorted array and a number n, find if there exists a pair of elements in the array whose difference is n. 
+Input: arr[] = {5, 20, 3, 2, 50, 80}, n = 78
+Output: Pair Found: (2, 80)
+
+#Code 
+
+def solve(arr,k):
+    arr.sort()
+    i=0 
+    j=1 
+    while j < len(arr):
+        if arr[j]-arr[i]==k:
+            return [arr[i],arr[j]]
+        elif arr[j]-arr[i]<k:
+            j+=1 
+        else:
+            i+=1
+    return False
+arr=[1, 8, 30, 40, 100]
+k=60
+print(solve(arr,k))
+
+output=[100,40]

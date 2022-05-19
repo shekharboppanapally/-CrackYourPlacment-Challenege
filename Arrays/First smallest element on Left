@@ -1,0 +1,23 @@
+arr=[4,17,20,25,13,30,40,8,3,10]
+output=[-9223372036854775807, 4, 17, 20, 4, 13, 30, 4, -9223372036854775807, 3]
+
+#Code 
+
+import sys
+def firstsmalleonLeft(arr):
+    N=len(arr)
+    B=[0]*N
+    stack=[]
+    stack.append(sys.maxsize)
+    for i in range(0,N):
+        while stack and arr[i]<=stack[-1]:
+            stack.pop()
+        if stack==[]:
+            B[i]=-(sys.maxsize)
+        else:
+            B[i]=stack[-1]
+        stack.append(arr[i])
+    return B
+
+arr=[4,17,20,25,13,30,40,8,3,10]
+print(firstsmalleonLeft(arr))
